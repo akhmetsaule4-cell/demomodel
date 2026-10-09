@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ODM — Подгузники для взрослых для тяжёлой инконтиненции</title>
+<meta name="description" content="Демонстрационный сайт для моделирования производства подгузников для взрослых для тяжёлой инконтиненции. СЭЗ «Alatau». Инвестиционный проект.">
+<meta name="theme-color" content="#16264f">
+
+<!-- Open Graph -->
+<meta property="og:title" content="ODM — Подгузники для взрослых для тяжёлой инконтиненции">
+<meta property="og:description" content="Демонстрационный сайт для моделирования производства подгузников для взрослых.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="kk_KZ">
+
+<!-- Favicon (SVG inline) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+
+<style>
+  :root{
+    --primary:#16264f;
+    --secondary:#3d5178;
+    --accent:#2a7ab5;
+    --light:#f3f8fc;
+    --white:#ffffff;
+    --border:#dcebf7;
+    --green:#1e7e34;
+    --warn:#c0392b;
+    --shadow:0 4px 20px rgba(22,38,79,0.08);
+    --shadow-lg:0 12px 40px rgba(22,38,79,0.12);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+  }
+  .section{scroll-margin-top:80px;}
+
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:var(--white);color:var(--primary);
+    line-height:1.55;overflow-x:hidden;font-size:16px;
+    padding-bottom:72px;
+  }
+  img{max-width:100%;display:block;}
+
+  /* HEADER */
+  .header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(255,255,255,0.98);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+    padding:10px 16px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:12px;height:60px;
+  }
+  .header-logo{font-weight:800;font-size:14px;letter-spacing:0.3px;color:var(--primary);line-height:1.2;}
+  .logo-short{display:inline;}
+  .logo-full{display:none;}
+  .header-nav{display:none;}
+  .lang-switch{display:flex;gap:4px;}
+  .lang-switch button{
+    background:none;border:1px solid var(--border);border-radius:10px;
+    padding:0 14px;cursor:pointer;font-size:14px;font-weight:700;
+    color:var(--secondary);transition:all .2s;font-family:inherit;
+    min-width:50px;height:40px;
+  }
+  .lang-switch button.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+
+  /* HERO */
+  .hero{
+    min-height:auto;
+    padding:90px 20px 40px;
+    text-align:center;
+    background:radial-gradient(ellipse at 50% 0%, #f3f8fc 0%, #dcebf7 60%, #cfe4f4 100%);
+  }
+  .hero-demo-badge{
+    display:inline-block;background:var(--warn);color:#fff;
+    padding:5px 14px;border-radius:100px;font-size:12px;font-weight:700;
+    margin-bottom:14px;letter-spacing:0.5px;text-transform:uppercase;
+  }
+  .hero-badge{
+    display:inline-block;background:var(--accent);color:#fff;
+    padding:6px 16px;border-radius:100px;font-size:13px;font-weight:700;
+    margin-bottom:16px;letter-spacing:0.3px;
+  }
+  .hero-title{
+    font-size:clamp(28px,5.5vw,46px);font-weight:800;
+    color:var(--primary);margin-bottom:16px;line-height:1.1;
+    max-width:900px;margin-left:auto;margin-right:auto;
+    text-transform:uppercase;letter-spacing:0.5px;
+  }
+  .hero-subtitle{
+    font-size:clamp(14px,2vw,16px);color:var(--secondary);
+    margin-bottom:24px;max-width:680px;margin-left:auto;margin-right:auto;
+    line-height:1.55;font-weight:400;
+  }
+  .hero-product-compact{
+    display:inline-flex;align-items:center;gap:12px;
+    background:var(--white);border-radius:100px;
+    padding:10px 20px 10px 14px;margin-bottom:24px;
+    box-shadow:var(--shadow);border:1px solid var(--border);
+    font-size:14px;color:var(--secondary);font-weight:600;
+  }
+  .hero-product-compact .icon{font-size:22px;}
+  .hero-cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    gap:10px;background:var(--primary);color:#fff;
+    padding:16px 32px;border-radius:100px;
+    font-size:17px;font-weight:700;text-decoration:none;
+    box-shadow:0 8px 24px rgba(22,38,79,0.25);
+    transition:transform .2s;min-height:56px;
+    margin-bottom:16px;
+  }
+  .hero-cta:hover{transform:translateY(-2px);}
+  .hero-author{font-size:13px;color:var(--secondary);opacity:.85;}
+
+  /* SECTION */
+  .section{padding:56px 20px;max-width:1100px;margin:0 auto;}
+  .section-alt{background:var(--light);}
+  .section-tag{
+    display:inline-block;font-size:13px;font-weight:700;
+    color:var(--accent);text-transform:uppercase;letter-spacing:1px;
+    margin-bottom:8px;
+  }
+  .section-title{
+    font-size:clamp(20px,3.2vw,26px);font-weight:700;
+    color:var(--primary);margin-bottom:8px;line-height:1.25;
+  }
+  .section-title-small{
+    font-size:clamp(17px,2.4vw,20px);font-weight:700;
+    color:var(--primary);margin-bottom:8px;line-height:1.25;
+  }
+  .section-subtitle{color:var(--secondary);font-size:14px;margin-bottom:28px;max-width:680px;}
+
+  /* SPEC LIST */
+  .spec-list{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0 48px;
+    margin-top:8px;
+  }
+  @media(min-width:640px){
+    .spec-list{grid-template-columns:1fr 1fr;}
+  }
+  .spec-item{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+    font-size:15px;
+  }
+  .spec-item .spec-key{
+    color:var(--secondary);
+    font-weight:600;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .spec-item .spec-dots{
+    flex:1;
+    border-bottom:1px dotted var(--border);
+    transform:translateY(-4px);
+    min-width:20px;
+  }
+  .spec-item .spec-val{
+    color:var(--primary);
+    font-weight:700;
+    text-align:right;
+    white-space:nowrap;
+  }
+  .spec-item .spec-val .accent{color:var(--accent);}
+
+  /* CALCULATOR */
+  .calc-box{
+    background:var(--white);border-radius:var(--radius);
+    padding:24px 20px;box-shadow:var(--shadow-lg);
+    border:1px solid var(--border);
+  }
+  .calc-hint{
+    background:linear-gradient(135deg,#fff8e1,#fff3cd);
+    border-left:4px solid #f0ad4e;
+    border-radius:10px;padding:14px 16px;margin-bottom:20px;
+    font-size:14px;color:var(--primary);font-weight:600;line-height:1.5;
+  }
+  .calc-mode{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:24px;}
+  @media(min-width:600px){.calc-mode{grid-template-columns:1fr 1fr;}}
+  .calc-mode label{
+    display:flex;align-items:center;gap:10px;
+    font-size:14px;cursor:pointer;color:var(--primary);font-weight:600;
+    padding:14px 16px;background:var(--light);border-radius:12px;
+    border:2px solid transparent;transition:all .2s;min-height:56px;
+  }
+  .calc-mode label:hover{border-color:var(--accent);}
+  .calc-mode label.active{border-color:var(--accent);background:#e8f4ff;}
+  .calc-mode input[type="radio"]{accent-color:var(--accent);width:18px;height:18px;flex-shrink:0;}
+  .calc-row{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+  .calc-row .row-head{
+    display:flex;justify-content:space-between;align-items:center;
+    gap:12px;flex-wrap:wrap;
+  }
+  .calc-row label{font-size:15px;font-weight:700;color:var(--primary);}
+  .calc-input{
+    width:160px;padding:10px 14px;border:2px solid var(--border);
+    border-radius:10px;font-size:16px;font-weight:700;color:var(--primary);
+    font-family:inherit;text-align:right;outline:none;transition:border-color .2s;
+  }
+  .calc-input:focus{border-color:var(--accent);}
+  .calc-slider{
+    width:100%;height:6px;border-radius:3px;
+    background:var(--border);outline:none;-webkit-appearance:none;
+  }
+  .calc-slider::-webkit-slider-thumb{
+    -webkit-appearance:none;width:26px;height:26px;border-radius:50%;
+    background:var(--accent);cursor:pointer;
+    box-shadow:0 2px 8px rgba(42,122,181,0.4);
+  }
+  .calc-slider::-moz-range-thumb{
+    width:26px;height:26px;border-radius:50%;background:var(--accent);
+    cursor:pointer;border:none;
+  }
+  .calc-result{
+    background:var(--light);border-radius:12px;padding:16px;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:10px;margin-bottom:16px;
+  }
+  .calc-result-item{
+    text-align:center;padding:14px 8px;
+    border-radius:10px;background:var(--white);
+  }
+  .calc-result-item.highlight{background:var(--primary);}
+  .calc-result-item.highlight .val{color:#fff;}
+  .calc-result-item.highlight .lbl{color:rgba(255,255,255,0.75);}
+  .calc-result-item.warn{background:#fff5f5;border:1px solid #ffd6d6;}
+  .calc-result-item.warn .val{color:var(--warn);}
+  .calc-result-item .val{font-size:20px;font-weight:800;color:var(--accent);line-height:1.2;word-break:break-word;}
+  .calc-result-item .lbl{font-size:12px;color:var(--secondary);margin-top:4px;font-weight:600;}
+  .calc-source{
+    background:#f0f7fb;border-left:4px solid var(--accent);
+    padding:12px 16px;border-radius:10px;font-size:13px;
+    color:var(--secondary);line-height:1.6;
+  }
+  .calc-source strong{color:var(--primary);}
+
+  /* ACCORDION */
+  details.ref-block{
+    background:var(--white);border-radius:var(--radius);
+    border:1px solid var(--border);margin-top:12px;
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.ref-block summary{
+    padding:18px 22px;font-size:16px;font-weight:700;
+    color:var(--primary);cursor:pointer;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;
+    min-height:60px;gap:12px;
+  }
+  details.ref-block summary::-webkit-details-marker{display:none;}
+  details.ref-block summary::after{
+    content:"＋";font-size:22px;color:var(--accent);
+    transition:transform .2s;font-weight:300;flex-shrink:0;
+  }
+  details.ref-block[open] summary::after{content:"−";}
+  details.ref-block .details-content{padding:0 22px 22px;}
+
+  /* CARDS */
+  .cards{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;margin-top:16px;
+  }
+  .card{
+    background:var(--white);border-radius:14px;
+    padding:20px;border:1px solid var(--border);
+    box-shadow:var(--shadow);
+  }
+  .card-number{font-size:28px;font-weight:800;color:var(--accent);line-height:1;}
+  .card-label{font-size:14px;color:var(--primary);margin-top:8px;font-weight:700;}
+  .card-desc{font-size:13px;color:var(--secondary);margin-top:8px;line-height:1.5;}
+
+  /* TABLE */
+  .table-wrap{overflow-x:auto;margin-top:16px;border-radius:12px;box-shadow:var(--shadow);}
+  table{width:100%;border-collapse:collapse;background:var(--white);}
+  th{background:var(--primary);color:#fff;padding:12px 14px;text-align:left;font-size:13px;font-weight:700;}
+  td{padding:12px 14px;border-bottom:1px solid var(--border);font-size:13px;color:var(--primary);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  tr:nth-child(even) td{background:#fafcfe;}
+
+  /* EDUCATION */
+  .edu-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px;}
+  @media(min-width:640px){.edu-grid{grid-template-columns:1fr 1fr;}}
+  .edu-col{border-radius:14px;padding:20px;}
+  .edu-bad{background:#fff5f5;border:1px solid #ffd6d6;}
+  .edu-good{background:#f0faf4;border:1px solid #b8e6c8;}
+  .edu-col h4{font-size:16px;margin-bottom:14px;}
+  .edu-bad h4{color:var(--warn);}
+  .edu-good h4{color:var(--green);}
+  .edu-item{padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px;color:var(--primary);}
+  .edu-item:last-child{border-bottom:none;}
+  .edu-item strong{display:block;margin-bottom:2px;}
+
+  /* TAX */
+  .tax-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px;}
+  @media(min-width:640px){.tax-grid{grid-template-columns:1fr 1fr;}}
+  .tax-col{border-radius:14px;padding:20px;}
+  .tax-col-standard{background:#fff5f5;border:1px solid #ffd6d6;}
+  .tax-col-sez{background:#f0faf4;border:1px solid #b8e6c8;}
+  .tax-col h4{font-size:15px;margin-bottom:14px;color:var(--primary);}
+  .tax-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px;}
+  .tax-item:last-child{border-bottom:none;}
+  .tax-item .label{color:var(--secondary);}
+  .tax-item .value{font-weight:800;}
+  .tax-col-standard .value{color:var(--warn);}
+  .tax-col-sez .value{color:var(--green);}
+
+  /* CONTACT */
+  .wa-box{
+    background:var(--white);border-radius:var(--radius);
+    padding:24px 20px;box-shadow:var(--shadow);
+    border:1px solid var(--border);max-width:560px;margin:0 auto;
+  }
+  .wa-box h3{font-size:20px;margin-bottom:6px;color:var(--primary);}
+  .wa-box p{font-size:14px;color:var(--secondary);margin-bottom:20px;}
+  .wa-box input,.wa-box textarea{
+    width:100%;padding:14px 16px;border:2px solid var(--border);
+    border-radius:12px;font-size:16px;font-family:inherit;
+    margin-bottom:12px;outline:none;color:var(--primary);background:var(--white);
+  }
+  .wa-box input:focus,.wa-box textarea:focus{border-color:var(--accent);}
+  .wa-box button{
+    width:100%;padding:16px;background:#25D366;color:#fff;
+    border:none;border-radius:12px;font-size:16px;font-weight:700;
+    cursor:pointer;font-family:inherit;min-height:56px;
+  }
+
+  /* FOOTER */
+  .footer{
+    background:var(--primary);color:#fff;
+    padding:32px 20px;text-align:center;font-size:13px;
+  }
+  .footer a{color:#bfe0f7;text-decoration:none;}
+  .footer .disclaimer{font-size:11px;opacity:.6;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;}
+
+  /* BOTTOM NAV */
+  .bottom-nav{
+    position:fixed;bottom:0;left:0;right:0;z-index:1000;
+    background:rgba(255,255,255,0.98);
+    backdrop-filter:blur(12px);
+    border-top:1px solid var(--border);
+    display:grid;grid-template-columns:repeat(4,1fr);
+    padding:6px 4px;
+    padding-bottom:calc(6px + env(safe-area-inset-bottom,0px));
+  }
+  .bottom-nav a{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:2px;padding:8px 4px;text-decoration:none;
+    color:var(--secondary);font-size:11px;font-weight:600;
+    border-radius:10px;transition:background .2s;
+  }
+  .bottom-nav a:active{background:var(--light);}
+  .bottom-nav a .ico{font-size:20px;}
+
+  /* LANG */
+  .kz{display:none;}
+  body.kz-lang .ru{display:none;}
+  body.kz-lang .kz{display:block;}
+  body.kz-lang .bottom-nav .ru{display:none;}
+  body.kz-lang .bottom-nav .kz{display:flex;}
+  body.kz-lang .hero-product-compact .ru{display:none;}
+  body.kz-lang .hero-product-compact .kz{display:inline;}
+  body.kz-lang th.ru,body.kz-lang td.ru{display:none;}
+  body.kz-lang th.kz,body.kz-lang td.kz{display:table-cell;}
+  th.kz,td.kz{display:none;}
+
+  /* RESPONSIVE */
+  @media(min-width:900px){
+    .header-nav{
+      display:flex;gap:24px;align-items:center;
+    }
+    .header-nav a{
+      color:var(--secondary);text-decoration:none;
+      font-size:14px;font-weight:600;transition:color .2s;
+    }
+    .header-nav a:hover{color:var(--accent);}
+    .bottom-nav{display:none;}
+    body{padding-bottom:0;}
+    .logo-short{display:none;}
+    .logo-full{display:inline;}
+  }
+  @media(max-width:900px){
+    html{
+      scroll-padding-top:80px;
+      scroll-padding-bottom:90px;
+    }
+    .section{
+      scroll-margin-top:80px;
+      scroll-margin-bottom:90px;
+    }
+  }
+  @media(max-width:640px){
+    .table-wrap{
+      background:transparent;box-shadow:none;
+      border-radius:0;overflow:visible;
+    }
+    table,thead,tbody,th,td,tr{display:block;}
+    thead tr{position:absolute;top:-9999px;left:-9999px;}
+    tr{
+      background:var(--white) !important;
+      border:1px solid var(--border);border-radius:12px;
+      margin-bottom:10px;padding:14px;box-shadow:var(--shadow);
+    }
+    td{border:none;padding:6px 0;font-size:13px;}
+    td:empty{display:none;}
+    td:before{
+      content:attr(data-label);
+      display:block;font-weight:700;font-size:11px;
+      color:var(--accent);text-transform:uppercase;
+      letter-spacing:0.5px;margin-bottom:4px;
+    }
+    body:not(.kz-lang) td.kz{display:none;}
+    body.kz-lang td.ru{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-logo">
+    <span class="logo-short">ODM</span>
+    <span class="logo-full">ODM (Original Design Manufacturer)</span>
+  </div>
+  <nav class="header-nav">
+    <a href="#product" class="ru">Продукт</a>
+    <a href="#product" class="kz">Өнім</a>
+    <a href="#advantage" class="ru">Экономика</a>
+    <a href="#advantage" class="kz">Экономика</a>
+    <a href="#problem" class="ru">Рынок</a>
+    <a href="#problem" class="kz">Нарық</a>
+    <a href="#norm" class="ru">Нормативы</a>
+    <a href="#norm" class="kz">Нормативтер</a>
+    <a href="#contact" class="ru">Контакты</a>
+    <a href="#contact" class="kz">Байланыс</a>
+  </nav>
+  <div class="lang-switch">
+    <button id="btn-ru" class="active" onclick="setLang('ru')">RU</button>
+    <button id="btn-kz" onclick="setLang('kz')">KZ</button>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="hero-demo-badge ru">Демонстрационный сайт для моделирования</span>
+  <span class="hero-demo-badge kz">Модельдеуге арналған демонстрациялық сайт</span>
+  <br>
+  <span class="hero-badge ru">Инвестиционный проект · Запуск</span>
+  <span class="hero-badge kz">Инвестициялық жоба · Іске қосу</span>
+
+  <h1 class="hero-title ru">Продукт: подгузники для взрослых для тяжёлой инконтиненции</h1>
+  <h1 class="hero-title kz">Өнім: ересектерге арналған ауыр инконтиненцияға арналған жөргектер</h1>
+
+  <p class="hero-subtitle ru">Технические характеристики, экономика и нормативная база. Размер M — средний, взят для демонстрационного моделирования.</p>
+  <p class="hero-subtitle kz">Техникалық сипаттамалар, экономика және нормативтік база. M өлшемі — орташа, демонстрациялық модельдеу үшін алынған.</p>
+
+  <div class="hero-product-compact">
+    <span class="icon">🩺</span>
+    <span class="ru">Размер M · липучки ±1 · SAP 28–30 г · двойной слой</span>
+    <span class="kz">M өлшемі · ±1 жабысқақтар · SAP 28–30 г · қос қабат</span>
+  </div>
+
+  <br>
+  <a href="#advantage" class="hero-cta">
+    <span class="ru">📊 Рассчитать окупаемость</span>
+    <span class="kz">📊 Өтелуді есептеу</span>
+  </a>
+  <p class="hero-author ru">Автор проекта: <strong>Сауле Ахмет</strong></p>
+  <p class="hero-author kz">Жоба авторы: <strong>Сауле Ахмет</strong></p>
+</section>
+
+<section class="section section-alt" id="product">
+  <span class="section-tag ru">Продукт</span>
+  <span class="section-tag kz">Өнім</span>
+  <h2 class="section-title-small ru">Технические характеристики</h2>
+  <h2 class="section-title-small kz">Техникалық сипаттамалар</h2>
+  <p class="section-subtitle ru">Модель размера M — средний типоразмер, используется для демонстрационного расчёта.</p>
+  <p class="section-subtitle kz">M өлшемі үлгісі — орташа типтік өлшем, демонстрациялық есептеу үшін қолданылады.</p>
+
+  <div class="spec-list">
+    <div class="spec-item">
+      <span class="spec-key ru">SAP</span>
+      <span class="spec-key kz">SAP</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val"><span class="accent">28–30 г</span></span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-key ru">Слой</span>
+      <span class="spec-key kz">Қабат</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val">двойной</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-key ru">Размер</span>
+      <span class="spec-key kz">Өлшем</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val"><span class="accent">M</span> (средний)</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-key ru">Липучки</span>
+      <span class="spec-key kz">Жабысқақтар</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val">±1 размер</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-key ru">Индикатор наполнения</span>
+      <span class="spec-key kz">Толтыру индикаторы</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val">есть</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-key ru">Назначение</span>
+      <span class="spec-key kz">Мақсаты</span>
+      <span class="spec-dots"></span>
+      <span class="spec-val">тяжёлая форма</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="advantage">
+  <span class="section-tag ru">Экономика</span>
+  <span class="section-tag kz">Экономика</span>
+  <h2 class="section-title ru">Рассчитайте окупаемость</h2>
+  <h2 class="section-title kz">Өтелуді есептеңіз</h2>
+  <p class="section-subtitle ru">Меняйте параметры — результаты пересчитываются автоматически. Все цифры — для демонстрационного моделирования.</p>
+  <p class="section-subtitle kz">Параметрлерді өзгертіңіз — нәтижелер автоматты түрде қайта есептеледі. Барлық сандар — демонстрациялық модельдеу үшін.</p>
+
+  <div class="calc-box">
+    <div class="calc-hint">
+      <span class="ru">💡 Двигайте ползунки или вводите точные числа в поля.</span>
+      <span class="kz">💡 Сырғытпаларды жылжытыңыз немесе өрістерге нақты сандарды енгізіңіз.</span>
+    </div>
+
+    <div class="calc-mode">
+      <label class="active" id="lbl-sez" onclick="selectMode('sez')">
+        <input type="radio" name="taxmode" value="sez" checked onchange="updateCalc()">
+        <span class="ru">СЭЗ «Alatau» — КПН 0%, НДС 0%, земля 0 ₸</span>
+        <span class="kz">«Alatau» АЭА — КПН 0%, ҚҚС 0%, жер 0 ₸</span>
+      </label>
+      <label id="lbl-std" onclick="selectMode('std')">
+        <input type="radio" name="taxmode" value="std" onchange="updateCalc()">
+        <span class="ru">Стандартный режим — КПН 20%, НДС 16%, земля учитывается</span>
+        <span class="kz">Стандартты режим — КПН 20%, ҚҚС 16%, жер ескеріледі</span>
+      </label>
+    </div>
+
+    <!-- Цена -->
+    <div class="calc-row">
+      <div class="row-head">
+        <label class="ru">Цена за штуку, ₸</label>
+        <label class="kz">Бір дана бағасы, ₸</label>
+        <input type="number" class="calc-input" id="price-input" value="350" min="100" max="1500" step="10" oninput="syncFromInput('price')">
+      </div>
+      <input type="range" class="calc-slider" id="price-range" min="100" max="1500" value="350" step="10" oninput="syncFromSlider('price')">
+    </div>
+
+    <!-- Себестоимость -->
+    <div class="calc-row">
+      <div class="row-head">
+        <label class="ru">Себестоимость, ₸/шт</label>
+        <label class="kz">Өзіндік құн, ₸/дана</label>
+        <input type="number" class="calc-input" id="cost-input" value="175" min="100" max="500" step="1" oninput="syncFromInput('cost')">
+      </div>
+      <input type="range" class="calc-slider" id="cost-range" min="100" max="500" value="175" step="1" oninput="syncFromSlider('cost')">
+    </div>
+
+    <!-- Продажи -->
+    <div class="calc-row">
+      <div class="row-head">
+        <label class="ru">Продажи в месяц, шт</label>
+        <label class="kz">Айлық сату, дана</label>
+        <input type="number" class="calc-input" id="qty-input" value="1000000" min="10000" max="2099160" step="10000" oninput="syncFromInput('qty')">
+      </div>
+      <input type="range" class="calc-slider" id="qty-range" min="50000" max="2099160" value="1000000" step="10000" oninput="syncFromSlider('qty')">
+    </div>
+
+    <!-- ФОТ -->
+    <div class="calc-row">
+      <div class="row-head">
+        <label class="ru">ФОТ, ₸/мес</label>
+        <label class="kz">Еңбекақы қоры, ₸/ай</label>
+        <input type="number" class="calc-input" id="salary-input" value="31000000" min="1000000" max="100000000" step="100000" oninput="syncFromInput('salary')">
+      </div>
+      <input type="range" class="calc-slider" id="salary-range" min="1000000" max="100000000" value="31000000" step="100000" oninput="syncFromSlider('salary')">
+    </div>
+
+    <!-- Земля -->
+    <div class="calc-row">
+      <div class="row-head">
+        <label class="ru">Стоимость земли, ₸</label>
+        <label class="kz">Жер құны, ₸</label>
+        <input type="number" class="calc-input" id="land-input" value="45000000" min="0" max="200000000" step="1000000" oninput="syncFromInput('land')">
+      </div>
+      <input type="range" class="calc-slider" id="land-range" min="0" max="200000000" value="45000000" step="1000000" oninput="syncFromSlider('land')">
+    </div>
+
+    <div class="calc-result">
+      <div class="calc-result-item">
+        <div class="val" id="calc-annual-qty">—</div>
+        <div class="lbl ru">шт/год</div>
+        <div class="lbl kz">дана/жыл</div>
+      </div>
+      <div class="calc-result-item" id="calc-breakeven-item">
+        <div class="val" id="calc-breakeven">—</div>
+        <div class="lbl ru">ТБУ, шт/мес</div>
+        <div class="lbl kz">ШН, дана/ай</div>
+      </div>
+      <div class="calc-result-item">
+        <div class="val" id="calc-annual-profit">—</div>
+        <div class="lbl ru">прибыль/год</div>
+        <div class="lbl kz">пайда/жыл</div>
+      </div>
+      <div class="calc-result-item highlight">
+        <div class="val" id="calc-payback">—</div>
+        <div class="lbl ru">окупаемость</div>
+        <div class="lbl kz">өтелу</div>
+      </div>
+    </div>
+
+    <div class="calc-source">
+      <p class="ru"><strong>Условия:</strong> CAPEX 1 255 590 тыс. ₸ · OPEX: ФОТ + развозка сотрудников 700 000 ₸/мес (входит в себестоимость) · стандартный режим: КПН 20% от валовой прибыли · НДС 16% сверх цены, в прибыль не входит · земля: в СЭЗ 0 ₸, в стандартном режиме учитывается покупка (с коммуникациями: свет, вода, газ).</p>
+      <p class="kz"><strong>Шарттар:</strong> CAPEX 1 255 590 мың ₸ · OPEX: Еңбекақы қоры + қызметкерлерді тасымалдау 700 000 ₸/ай (өзіндік құнға кіреді) · стандартты режим: жалпы пайдадан КПН 20% · ҚҚС 16% баға үстінен, пайдаға кірмейді · жер: АЭА-да 0 ₸, стандартты режимде сатып алу ескеріледі (коммуникациялармен: жарық, су, газ).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="problem">
+  <span class="section-tag ru">Рынок</span>
+  <span class="section-tag kz">Нарық</span>
+  <h2 class="section-title ru">Потребность и данные</h2>
+  <h2 class="section-title kz">Қажеттілік және деректер</h2>
+  <p class="section-subtitle ru">Подтверждённые источники. Разверните нужный раздел.</p>
+  <p class="section-subtitle kz">Расталған көздер. Қажетті бөлімді ашыңыз.</p>
+
+  <details class="ref-block">
+    <summary>
+      <span class="ru">Демография и инвалидность</span>
+      <span class="kz">Демография және мүгедектік</span>
+    </summary>
+    <div class="details-content">
+      <div class="cards">
+        <div class="card">
+          <div class="card-number">1,9 млн</div>
+          <div class="card-label ru">Население 65+</div>
+          <div class="card-label kz">65+ халық</div>
+          <div class="card-desc ru">01.01.2025 · прогноз 19% к 2050</div>
+          <div class="card-desc kz">01.01.2025 · 2050 ж. 19% болжам</div>
+        </div>
+        <div class="card">
+          <div class="card-number">743 900</div>
+          <div class="card-label ru">Взрослые с инвалидностью</div>
+          <div class="card-label kz">Мүгедек ересектер</div>
+          <div class="card-desc ru">01.07.2025 · 3,7% населения</div>
+          <div class="card-desc kz">01.07.2025 · халықтың 3,7%</div>
+        </div>
+        <div class="card">
+          <div class="card-number">75,44</div>
+          <div class="card-label ru">Ожидаемая продолжительность жизни</div>
+          <div class="card-label kz">Күтілетін өмір сүру ұзақтығы</div>
+          <div class="card-desc ru">2024</div>
+          <div class="card-desc kz">2024</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="ref-block">
+    <summary>
+      <span class="ru">Недержание мочи</span>
+      <span class="kz">Несеп ұстамау</span>
+    </summary>
+    <div class="details-content">
+      <div class="cards">
+        <div class="card">
+          <div class="card-number">27,5%</div>
+          <div class="card-label ru">Распространённость UI у студенток</div>
+          <div class="card-label kz">Студенттер арасында UI</div>
+          <div class="card-desc ru">n=574 · Epidemiologia, 2025</div>
+          <div class="card-desc kz">n=574 · Epidemiologia, 2025</div>
+        </div>
+        <div class="card">
+          <div class="card-number">10,1%</div>
+          <div class="card-label ru">Распространённость OAB у студенток</div>
+          <div class="card-label kz">Студенттер арасында OAB</div>
+          <div class="card-desc ru">n=574 · Epidemiologia, 2025</div>
+          <div class="card-desc kz">n=574 · Epidemiologia, 2025</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="ref-block">
+    <summary>
+      <span class="ru">Психические расстройства</span>
+      <span class="kz">Психикалық бұзылулар</span>
+    </summary>
+    <div class="details-content">
+      <div class="cards">
+        <div class="card">
+          <div class="card-number">+34%</div>
+          <div class="card-label ru">Рост заболеваемости (женщины)</div>
+          <div class="card-label kz">Аурушаңдықтың өсуі (әйелдер)</div>
+          <div class="card-desc ru">39 → 51,1 на 100 000 (2020–2024)</div>
+          <div class="card-desc kz">39 → 51,1 100 000-ға (2020–2024)</div>
+        </div>
+        <div class="card">
+          <div class="card-number">+56%</div>
+          <div class="card-label ru">Рост заболеваемости (мужчины)</div>
+          <div class="card-label kz">Аурушаңдықтың өсуі (ерлер)</div>
+          <div class="card-desc ru">52 → 80,9 на 100 000 (2020–2024)</div>
+          <div class="card-desc kz">52 → 80,9 100 000-ға (2020–2024)</div>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="ref-block">
+    <summary>
+      <span class="ru">Клинические протоколы МЗ РК</span>
+      <span class="kz">ҚР ДСМ клиникалық хаттамалары</span>
+    </summary>
+    <div class="details-content">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="ru">Заболевание</th>
+              <th class="kz">Ауру</th>
+              <th class="ru">Документ</th>
+              <th class="kz">Құжат</th>
+              <th>МКБ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ru" data-label="Заболевание"><strong>Стрессовое недержание мочи у женщин</strong></td>
+              <td class="kz" data-label="Ауру"><strong>Әйелдердегі стресс несеп ұстамау</strong></td>
+              <td class="ru" data-label="Документ">Клинический протокол МЗ РК, 2024. Одобрен 29.09.2025, №239</td>
+              <td class="kz" data-label="Құжат">ҚР ДСМ клиникалық хаттамасы, 2024. 29.09.2025 бекітілген, №239</td>
+              <td data-label="МКБ">N39.3</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Заболевание"><strong>Рассеянный склероз</strong></td>
+              <td class="kz" data-label="Ауру"><strong>Шашыраңқы склероз</strong></td>
+              <td class="ru" data-label="Документ">Клинический протокол МЗ РК, 2015 (пересмотр 2018, 2022)</td>
+              <td class="kz" data-label="Құжат">ҚР ДСМ клиникалық хаттамасы, 2015 (2018, 2022 қайта қарау)</td>
+              <td data-label="МКБ">G35.0</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Заболевание"><strong>Болезнь Паркинсона</strong></td>
+              <td class="kz" data-label="Ауру"><strong>Паркинсон ауруы</strong></td>
+              <td class="ru" data-label="Документ">Клинические протоколы МЗ РК, 2016</td>
+              <td class="kz" data-label="Құжат">ҚР ДСМ клиникалық хаттамалары, 2016</td>
+              <td data-label="МКБ">G20</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Заболевание"><strong>Деменция при болезни Альцгеймера</strong></td>
+              <td class="kz" data-label="Ауру"><strong>Альцгеймер ауруындағы деменция</strong></td>
+              <td class="ru" data-label="Документ">Клинический протокол МЗ РК, 2015. Протокол №9 от 15.09.2015</td>
+              <td class="kz" data-label="Құжат">ҚР ДСМ клиникалық хаттамасы, 2015. №9 хаттама 15.09.2015</td>
+              <td data-label="МКБ">F00.0–F00.9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <details class="ref-block">
+    <summary>
+      <span class="ru">Рынок: Euromonitor 2025</span>
+      <span class="kz">Нарық: Euromonitor 2025</span>
+    </summary>
+    <div class="details-content">
+      <div class="cards">
+        <div class="card">
+          <div class="card-number">195 млн</div>
+          <div class="card-label ru">Объём продаж, шт (2025)</div>
+          <div class="card-label kz">Сату көлемі, дана (2025)</div>
+          <div class="card-desc ru">+4% · Rx/Reimbursement</div>
+          <div class="card-desc kz">+4% · Rx/Reimbursement</div>
+        </div>
+        <div class="card">
+          <div class="card-number">73,5 млрд</div>
+          <div class="card-label ru">Объём, ₸ (2025)</div>
+          <div class="card-label kz">Көлем, ₸ (2025)</div>
+          <div class="card-desc ru">+16% · драйвер — 65+</div>
+          <div class="card-desc kz">+16% · драйвер — 65+</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--secondary);margin-top:16px;">
+        <span class="ru">Источник: Euromonitor International, <em>Rx/Reimbursement Adult Incontinence in Kazakhstan</em>, апрель 2026. Исследование in-country.</span>
+        <span class="kz">Дереккөз: Euromonitor International, <em>Rx/Reimbursement Adult Incontinence in Kazakhstan</em>, 2026 ж. сәуір. In-country зерттеу.</span>
+      </p>
+    </div>
+  </details>
+</section>
+
+<section class="section" id="norm">
+  <span class="section-tag ru">Нормативы</span>
+  <span class="section-tag kz">Нормативтер</span>
+  <h2 class="section-title ru">Нормативная база</h2>
+  <h2 class="section-title kz">Нормативтік база</h2>
+  <p class="section-subtitle ru">Государство уже закупает подгузники для взрослых.</p>
+  <p class="section-subtitle kz">Мемлекет ересектерге арналған жөргектерді сатып алады.</p>
+
+  <details class="ref-block" open>
+    <summary>
+      <span class="ru">Документы и нормы</span>
+      <span class="kz">Құжаттар мен нормалар</span>
+    </summary>
+    <div class="details-content">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="ru">Орган</th>
+              <th class="kz">Орган</th>
+              <th class="ru">Документ</th>
+              <th class="kz">Құжат</th>
+              <th class="ru">Что подтверждает</th>
+              <th class="kz">Нені растайды</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ru" data-label="Орган"><strong>Министерство труда и социальной защиты населения РК</strong></td>
+              <td class="kz" data-label="Орган"><strong>ҚР Еңбек және халықты әлеуметтік қорғау министрлігі</strong></td>
+              <td class="ru" data-label="Документ">Приказ №287 от 30.06.2023</td>
+              <td class="kz" data-label="Құжат">№287 бұйрық 30.06.2023</td>
+              <td class="ru" data-label="Что подтверждает">Норма выдачи: 1 460 шт/год на человека</td>
+              <td class="kz" data-label="Нені растайды">Беру нормасы: адамға жылына 1 460 дана</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Орган"><strong>Министерство труда и социальной защиты населения РК</strong></td>
+              <td class="kz" data-label="Орган"><strong>ҚР Еңбек және халықты әлеуметтік қорғау министрлігі</strong></td>
+              <td class="ru" data-label="Документ">Приказ №32984 от 30.06.2023</td>
+              <td class="kz" data-label="Құжат">№32984 бұйрық 30.06.2023</td>
+              <td class="ru" data-label="Что подтверждает">Классификатор ТСР: размеры 55/75/100/130 см, впитываемость</td>
+              <td class="kz" data-label="Нені растайды">ТҚҚ жіктеуіші: 55/75/100/130 см өлшемдер, сіңіру</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Орган"><strong>Комитет технического регулирования и метрологии МТИ РК</strong></td>
+              <td class="kz" data-label="Орган"><strong>ҚР СИМ техникалық реттеу және метрология комитеті</strong></td>
+              <td class="ru" data-label="Документ">СТ РК 3689-2020</td>
+              <td class="kz" data-label="Құжат">СТ РК 3689-2020</td>
+              <td class="ru" data-label="Что подтверждает">Национальный стандарт на абсорбирующее бельё</td>
+              <td class="kz" data-label="Нені растайды">Абсорбциялық киімге ұлттық стандарт</td>
+            </tr>
+            <tr>
+              <td class="ru" data-label="Орган"><strong>Международная организация по стандартизации (ISO)</strong></td>
+              <td class="kz" data-label="Орган"><strong>Халықаралық стандарттау ұйымы (ISO)</strong></td>
+              <td class="ru" data-label="Документ">ISO 13485:2016</td>
+              <td class="kz" data-label="Құжат">ISO 13485:2016</td>
+              <td class="ru" data-label="Что подтверждает">Обязательное требование для производителей медизделий в РК/ЕАЭС</td>
+              <td class="kz" data-label="Нені растайды">ҚР/ЕАЭО-да медициналық бұйымдар өндірушілеріне міндетті талап</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section class="section section-alt" id="education">
+  <span class="section-tag ru">Образование</span>
+  <span class="section-tag kz">Білім</span>
+  <h2 class="section-title ru">Почему дешёвые подгузники дороже</h2>
+  <h2 class="section-title kz">Неге арзан жөргектер қымбат</h2>
+  <p class="section-subtitle ru">Разница между подгузником для лёгкой и тяжёлой инконтиненции видна по весу изделия.</p>
+  <p class="section-subtitle kz">Жеңіл және ауыр инконтиненцияға арналған жөргектердің айырмашылығы салмағымен көрінеді.</p>
+
+  <div class="edu-grid">
+    <div class="edu-col edu-bad">
+      <h4 class="ru">❌ Дешёвый подгузник для тяжёлой формы</h4>
+      <h4 class="kz">❌ Ауыр формаға арналған арзан жөргек</h4>
+      <div class="edu-item ru"><strong>Протекает через 1–2 часа</strong>Смена белья, стирка, замена матрасов</div>
+      <div class="edu-item kz"><strong>1–2 сағаттан кейін ағады</strong>Төсек ауыстыру, жуу, матрац</div>
+      <div class="edu-item ru"><strong>Мало SAP (15–20 г), один слой</strong>Опрелости, пролежни</div>
+      <div class="edu-item kz"><strong>SAP аз (15–20 г), бір қабат</strong>Тітіркену, жара</div>
+      <div class="edu-item ru"><strong>Жёсткие боковины</strong>Натирает, давит, пациент снимает</div>
+      <div class="edu-item kz"><strong>Қатты бүйірлер</strong>Үйкеледі, қысады, пациент шешеді</div>
+    </div>
+    <div class="edu-col edu-good">
+      <h4 class="ru">✅ ODM (Original Design Manufacturer)</h4>
+      <h4 class="kz">✅ ODM (Original Design Manufacturer)</h4>
+      <div class="edu-item ru"><strong>Усиленный SAP (28–30 г)</strong>Удерживает влагу при длительных промежутках</div>
+      <div class="edu-item kz"><strong>Күшейтілген SAP (28–30 г)</strong>Ұзақ аралықтарда ылғалды ұстайды</div>
+      <div class="edu-item ru"><strong>Двойной слой</strong>Удержание влаги внутри</div>
+      <div class="edu-item kz"><strong>Қос қабат</strong>Ылғалды ішінде ұстау</div>
+      <div class="edu-item ru"><strong>Размер M с липучками ±1</strong>Универсально</div>
+      <div class="edu-item kz"><strong>±1 жабысқақтары бар M өлшемі</strong>Әмбебап</div>
+      <div class="edu-item ru"><strong>Цена масс-маркета</strong>Доступно для семьи и ЛПУ</div>
+      <div class="edu-item kz"><strong>Масс-маркет бағасы</strong>Отбасы мен ЕМҰ үшін қолжетімді</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tax">
+  <span class="section-tag ru">Налоги</span>
+  <span class="section-tag kz">Салықтар</span>
+  <h2 class="section-title ru">Сравнение режимов</h2>
+  <h2 class="section-title kz">Режимдерді салыстыру</h2>
+  <p class="section-subtitle ru">СЭЗ «Alatau» (ОКЭД 13.95, приказ №546 от 22.12.2025 Минпромышленности РК).</p>
+  <p class="section-subtitle kz">«Alatau» АЭА (13.95 ӨКЭД, ҚР Өнеркәсіп министрлігінің №546 22.12.2025 бұйрығы).</p>
+
+  <div class="tax-grid">
+    <div class="tax-col tax-col-standard">
+      <h4 class="ru">Стандартный режим</h4>
+      <h4 class="kz">Стандартты режим</h4>
+      <div class="tax-item"><span class="label">КПН</span><span class="value">20%</span></div>
+      <div class="tax-item"><span class="label ru">НДС продажа</span><span class="label kz">ҚҚС сату</span><span class="value">16%</span></div>
+      <div class="tax-item"><span class="label ru">НДС импорт</span><span class="label kz">ҚҚС импорт</span><span class="value">5%</span></div>
+      <div class="tax-item"><span class="label ru">Земельный</span><span class="label kz">Жер</span><span class="value ru">есть</span><span class="value kz">бар</span></div>
+      <div class="tax-item"><span class="label ru">Имущество</span><span class="label kz">Мүлік</span><span class="value ru">есть</span><span class="value kz">бар</span></div>
+    </div>
+    <div class="tax-col tax-col-sez">
+      <h4 class="ru">СЭЗ «Alatau»</h4>
+      <h4 class="kz">«Alatau» АЭА</h4>
+      <div class="tax-item"><span class="label">КПН</span><span class="value">0%</span></div>
+      <div class="tax-item"><span class="label ru">НДС продажа</span><span class="label kz">ҚҚС сату</span><span class="value">0%</span></div>
+      <div class="tax-item"><span class="label ru">НДС импорт оборудования</span><span class="label kz">Жабдық импорты ҚҚС</span><span class="value">0%</span></div>
+      <div class="tax-item"><span class="label ru">Земельный</span><span class="label kz">Жер</span><span class="value">0%</span></div>
+      <div class="tax-item"><span class="label ru">Имущество</span><span class="label kz">Мүлік</span><span class="value">0%</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <span class="section-tag ru">Контакты</span>
+  <span class="section-tag kz">Байланыс</span>
+  <h2 class="section-title ru">Свяжитесь с нами</h2>
+  <h2 class="section-title kz">Бізбен байланысыңыз</h2>
+  <p class="section-subtitle ru">Сообщение поступит напрямую автору проекта.</p>
+  <p class="section-subtitle kz">Хабарлама жоба авторына тікелей жетеді.</p>
+
+  <div class="wa-box">
+    <h3 class="ru">Написать в WhatsApp</h3>
+    <h3 class="kz">WhatsApp-қа жазу</h3>
+    <p class="ru">Заполните форму — сообщение откроется в WhatsApp.</p>
+    <p class="kz">Форманы толтырыңыз — хабарлама WhatsApp-та ашылады.</p>
+    <input type="text" id="wa-name" placeholder="Ваше имя / Атыңыз">
+    <textarea id="wa-msg" rows="3" placeholder="Ваше сообщение / Хабарламаңыз"></textarea>
+    <button onclick="sendWA()">💬 <span class="ru">Отправить</span><span class="kz">Жіберу</span></button>
+  </div>
+</section>
+
+<footer class="footer">
+  <p><strong>ODM (Original Design Manufacturer)</strong> — Подгузники для взрослых для тяжёлой инконтиненции</p>
+  <p style="margin-top:6px;">Автор проекта: Сауле Ахмет</p>
+  <p style="margin-top:12px;">
+    <a href="https://www.euromonitor.com/rx-reimbursement-adult-incontinence-in-kazakhstan/report" target="_blank" rel="noopener">Euromonitor International, Rx/Reimbursement Adult Incontinence in Kazakhstan, 2026</a>
+  </p>
+  <p class="disclaimer">Демонстрационный сайт для моделирования. Данные носят справочный характер. Точные расчёты — в инвестиционном меморандуме. Отчёт Euromonitor доступен по подписке.</p>
+</footer>
+
+<nav class="bottom-nav">
+  <a href="#product">
+    <span class="ico">🩺</span>
+    <span class="ru">Продукт</span><span class="kz">Өнім</span>
+  </a>
+  <a href="#advantage">
+    <span class="ico">📊</span>
+    <span class="ru">Экономика</span><span class="kz">Экономика</span>
+  </a>
+  <a href="#problem">
+    <span class="ico">📈</span>
+    <span class="ru">Рынок</span><span class="kz">Нарық</span>
+  </a>
+  <a href="#contact">
+    <span class="ico">💬</span>
+    <span class="ru">Связь</span><span class="kz">Байланыс</span>
+  </a>
+</nav>
+
+<script>
+/* ================== КОНФИГ ================== */
+const WA_PHONE            = '77777717707';
+const CAPEX_BASE          = 1255590 * 1000;   // базовый CAPEX, ₸
+const OPEX_TRANSPORT      = 700000;           // развозка сотрудников, ₸/мес (фиксировано)
+
+const QTY_MIN             = 10000;
+const QTY_MAX             = 2099160;
+const PRICE_MIN           = 100;
+const PRICE_MAX           = 1500;
+const COST_MIN            = 100;
+const COST_MAX            = 500;
+const SALARY_MIN          = 1000000;
+const SALARY_MAX          = 100000000;
+const LAND_MIN            = 0;
+const LAND_MAX            = 200000000;
+const KPN_RATE            = 0.20;
+
+/* ================== ЯЗЫК ================== */
+function setLang(lang){
+  document.body.classList.toggle('kz-lang', lang === 'kz');
+  document.documentElement.lang = (lang === 'kz') ? 'kk' : 'ru';
+  document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+  document.getElementById('btn-kz').classList.toggle('active', lang === 'kz');
+  updateCalc();
+}
+
+/* ================== КАЛЬКУЛЯТОР ================== */
+function selectMode(mode){
+  const radio = document.querySelector('input[name="taxmode"][value="'+mode+'"]');
+  if (radio) radio.checked = true;
+  document.getElementById('lbl-sez').classList.toggle('active', mode === 'sez');
+  document.getElementById('lbl-std').classList.toggle('active', mode === 'std');
+  updateCalc();
+}
+
+function syncFromSlider(field){
+  const map = {
+    price:   ['price-input','price-range'],
+    cost:    ['cost-input','cost-range'],
+    qty:     ['qty-input','qty-range'],
+    salary:  ['salary-input','salary-range'],
+    land:    ['land-input','land-range']
+  };
+  const [inpId, rngId] = map[field];
+  document.getElementById(inpId).value = document.getElementById(rngId).value;
+  updateCalc();
+}
+
+function syncFromInput(field){
+  const cfg = {
+    price:  {inp:'price-input', rng:'price-range', min:PRICE_MIN, max:PRICE_MAX, def:350},
+    cost:   {inp:'cost-input',  rng:'cost-range',  min:COST_MIN,  max:COST_MAX,  def:175},
+    qty:    {inp:'qty-input',   rng:'qty-range',   min:QTY_MIN,   max:QTY_MAX,   def:1000000},
+    salary: {inp:'salary-input',rng:'salary-range',min:SALARY_MIN,max:SALARY_MAX,def:31000000},
+    land:   {inp:'land-input',  rng:'land-range',  min:LAND_MIN,  max:LAND_MAX,  def:45000000}
+  }[field];
+  let v = parseInt(document.getElementById(cfg.inp).value, 10);
+  if (isNaN(v)) v = cfg.def;
+  if (v < cfg.min) v = cfg.min;
+  if (v > cfg.max) v = cfg.max;
+  document.getElementById(cfg.inp).value = v;
+  document.getElementById(cfg.rng).value = v;
+  updateCalc();
+}
+
+function updateCalc(){
+  const price       = parseInt(document.getElementById('price-range').value, 10);
+  const costInput   = parseInt(document.getElementById('cost-range').value, 10);
+  const qtyMonthly  = parseInt(document.getElementById('qty-range').value, 10);
+  const salary      = parseInt(document.getElementById('salary-range').value, 10);
+  const land        = parseInt(document.getElementById('land-range').value, 10);
+  const mode        = document.querySelector('input[name="taxmode"]:checked').value;
+  const isKz        = document.body.classList.contains('kz-lang');
+  const fmt         = new Intl.NumberFormat(isKz ? 'kk-KZ' : 'ru-RU');
+
+  const annualQty   = qtyMonthly * 12;
+  const revenue     = annualQty * price;
+
+  /* OPEX — ФОТ (ползунок) + развозка (фиксировано 700 тыс) */
+  const opexMonthly = salary + OPEX_TRANSPORT;
+  const opexAnnual  = opexMonthly * 12;
+
+  /* OPEX распределяется на единицу продукции */
+  const opexPerUnit = annualQty > 0 ? (opexAnnual / annualQty) : 0;
+  const costFull    = costInput + opexPerUnit;
+
+  const costTotal   = annualQty * costFull;
+  const grossProfit = revenue - costTotal;
+
+  /* === ТОЧКА БЕЗУБЫТОЧНОСТИ === */
+  const margin = price - costInput;
+  const beItem = document.getElementById('calc-breakeven-item');
+  let breakeven = '—';
+  if (margin > 0){
+    const beMonthly = Math.ceil(opexMonthly / margin);
+    breakeven = fmt.format(beMonthly);
+    beItem.classList.remove('warn');
+  } else {
+    breakeven = 'н/д';
+    beItem.classList.add('warn');
+  }
+
+  /* CAPEX: базовый + земля (только для стандартного режима) */
+  let capex = CAPEX_BASE;
+  if (mode === 'std'){
+    capex = CAPEX_BASE + land;
+  }
+
+  let netProfit;
+  if (mode === 'sez'){
+    netProfit = grossProfit;
+  } else {
+    const kpn = grossProfit > 0 ? grossProfit * KPN_RATE : 0;
+    netProfit = grossProfit - kpn;
+  }
+
+  let payback = '—';
+  if (netProfit > 0){
+    const months = Math.ceil((capex / netProfit) * 12);
+    payback = isKz ? (months + ' ай') : (months + ' мес.');
+  }
+
+  document.getElementById('calc-annual-qty').textContent    = fmt.format(annualQty);
+  document.getElementById('calc-breakeven').textContent     = breakeven;
+  document.getElementById('calc-annual-profit').textContent = fmt.format(Math.round(netProfit)) + ' ₸';
+  document.getElementById('calc-payback').textContent       = payback;
+}
+
+/* ================== WHATSAPP ================== */
+function sendWA(){
+  const name  = document.getElementById('wa-name').value.trim();
+  const msg   = document.getElementById('wa-msg').value.trim();
+  const isKz  = document.body.classList.contains('kz-lang');
+  const fallback = isKz
+    ? 'Сәлеметсіз бе! ODM жобасы қызықтырады.'
+    : 'Здравствуйте! Интересует проект ODM.';
+  const prefix = isKz ? 'Аты: ' : 'Имя: ';
+  const text = encodeURIComponent(
+    (name ? prefix + name + '\n' : '') + (msg || fallback)
+  );
+  window.open('https://wa.me/' + WA_PHONE + '?text=' + text, '_blank');
+}
+
+/* ================== INIT ================== */
+updateCalc();
+</script>
+
+</body>
+</html>
